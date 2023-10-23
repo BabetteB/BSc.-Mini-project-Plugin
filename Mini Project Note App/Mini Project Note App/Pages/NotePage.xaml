@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mini_Project_Note_App.Pages.NotePage"
+             Title="NotePage">
+    <VerticalStackLayout>
+        <Border StrokeShape="RoundRectangle 24 24 24 24">
+            <VerticalStackLayout Background="#9dd4cf"
+                                 Spacing="10"
+                                 x:Name="note"
+                                 MinimumHeightRequest="400"
+                                 VerticalOptions="FillAndExpand"
+                                 HorizontalOptions="FillAndExpand">
+                <!-- Entry field for the note's title with specific text color and placeholder text. -->
+                <Entry x:Name="titleEntry"
+                           FontAttributes="Bold"
+                           Placeholder="Title" />
+
+                <!-- Larger text area (Editor) for the note's main content. Uses a predefined style and has specific height. -->
+                <Editor x:Name="contentEditor"
+                            Placeholder="Enter your response here"
+                            Style="{StaticResource EditorTextStyle}"
+                            HeightRequest="300" />
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Back button: Navigates back to the previous page and applies any note changes made. -->
+        <Button Text="Back"
+                    WidthRequest="130"
+                    Clicked="OnBackButtonClicked"/>
+    </VerticalStackLayout>
+</ContentPage>

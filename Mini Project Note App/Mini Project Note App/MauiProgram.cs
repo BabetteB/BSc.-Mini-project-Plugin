@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 
+using Mini_Project_Note_App.Pages;
+using Mini_Project_Note_App.ViewModels;
+
 namespace Mini_Project_Note_App;
 
 public static class MauiProgram
@@ -15,8 +18,12 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<NotePage>();
+        builder.Services.AddSingleton<ViewModel>();
+
 #if DEBUG
-		builder.Logging.AddDebug();
+        builder.Logging.AddDebug();
 #endif
 
 		return builder.Build();

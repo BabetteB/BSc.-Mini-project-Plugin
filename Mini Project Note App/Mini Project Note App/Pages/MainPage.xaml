@@ -1,0 +1,47 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:control="clr-namespace:Mini_Project_Note_App.Resources.CustomControls"
+             x:Class="Mini_Project_Note_App.Pages.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label FontAttributes="Bold"
+                   FontAutoScalingEnabled="false"
+                   FontSize="58"
+                   Text="PRIVATE THOUGHTS"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   x:Name="privateThoughts"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="Fill" />
+
+            <CollectionView x:Name="notesView"
+                            HorizontalOptions="Center"
+                            ItemsLayout="VerticalGrid, 2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border StrokeShape="RoundRectangle 24 24 24 24">
+                            <VerticalStackLayout Background="#9dd4cf"
+                                                Spacing="10"
+                                                x:Name="note"
+                                                HeightRequest="200">
+                                <Label FontAttributes="Bold"
+                                       FontAutoScalingEnabled="false"
+                                       FontSize="20"
+                                       Text="{Binding Title}"
+                                       HorizontalTextAlignment="Center"
+                                       x:Name="groceries"/>
+                                <Label FontAutoScalingEnabled="false"
+                                    FontSize="20"
+                                    Text="{Binding Content}"/>
+                                <VerticalStackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnNoteSelected"/>
+                                </VerticalStackLayout.GestureRecognizers>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
