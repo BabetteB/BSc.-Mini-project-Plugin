@@ -1,0 +1,67 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class=hmm category pagePage
+                    x:Name=hmm category page
+>
+<ScrollView>
+
+
+<VerticalStackLayout>
+
+        <ImageButton
+            Background="#ffffff"
+            BorderWidth="1"
+            x:Name="component2"
+            HeightRequest="36"
+            WidthRequest="48"
+            ImageSource="component 2.png"/>
+        <Label
+            FontSize="35"
+            Text="hmm"
+            x:Name="hmm"
+            HeightRequest="42"
+            WidthRequest="82"/>
+        <Border
+            StrokeShape="RoundRectangle 18">
+            <Button
+                BorderWidth="1"
+                x:Name="plus"
+                HeightRequest="65"
+                WidthRequest="296"/>
+        </Border>
+        <Button
+            FontSize="30"
+            Text="top 5 porn sites"
+            BorderWidth="1"
+            x:Name="porn"
+            HeightRequest="65"
+            WidthRequest="296"/>
+        <Button
+            FontSize="30"
+            Text="buddy application"
+            BorderWidth="1"
+            x:Name="buddy"
+            HeightRequest="65"
+            WidthRequest="296"/>
+        <Button
+            FontSize="30"
+            Text="Memes"
+            BorderWidth="1"
+            x:Name="memes"
+            HeightRequest="65"
+            WidthRequest="296"/>
+        <Button
+            FontSize="30"
+            Text="Navy Seals"
+            BorderWidth="1"
+            x:Name="navy"
+            HeightRequest="65"
+            WidthRequest="296"/>
+
+</VerticalStackLayout>
+
+
+</ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,74 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class=Frontpage/Categories overviewPage
+                    x:Name=Frontpage/Categories overview
+>
+<ScrollView>
+
+
+<VerticalStackLayout>
+
+        <Button
+            BorderWidth="1"
+            x:Name="notesCategories"
+            HeightRequest="42"
+            WidthRequest="283"
+            Background="#ff000000"/>
+        <Border
+            StrokeShape="RoundRectangle 20">
+            <Button
+                FontSize="22"
+                Text="Workouts"
+                BorderWidth="1"
+                x:Name="workouts"
+                HeightRequest="130"
+                WidthRequest="130"/>
+        </Border>
+        <Border
+            StrokeShape="RoundRectangle 20">
+            <Button
+                FontSize="22"
+                Text="Stuff I should remember"
+                BorderWidth="1"
+                x:Name="remember"
+                HeightRequest="130"
+                WidthRequest="130"/>
+        </Border>
+        <Border
+            StrokeShape="RoundRectangle 20">
+            <Button
+                FontSize="25"
+                Text="( ͡° ͜ʖ ͡°)"
+                BorderWidth="1"
+                x:Name="smile"
+                HeightRequest="130"
+                WidthRequest="130"/>
+        </Border>
+        <Border
+            StrokeShape="RoundRectangle 20">
+            <Button
+                FontSize="25"
+                Text="hmm"
+                BorderWidth="1"
+                x:Name="hmm"
+                HeightRequest="130"
+                WidthRequest="130"/>
+        </Border>
+        <Border
+            StrokeShape="RoundRectangle 20">
+            <Button
+                FontSize="25"
+                Text="School"
+                BorderWidth="1"
+                x:Name="school"
+                HeightRequest="130"
+                WidthRequest="130"/>
+        </Border>
+
+</VerticalStackLayout>
+
+
+</ScrollView>
+
+
+</ContentPage>

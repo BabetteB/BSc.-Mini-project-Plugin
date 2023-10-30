@@ -1,0 +1,44 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class=New notePage
+                    x:Name=New note
+>
+<ScrollView>
+
+
+<VerticalStackLayout>
+
+        <Editor
+            x:Name="frame1"
+            HeightRequest="516"
+            WidthRequest="308"
+            Placeholder="...
+"/>
+        
+        <control:component2 component2        />
+        <ImageButton
+            Background="#ffffff"
+            BorderWidth="1"
+            x:Name="fluent:save-16-regular"
+            HeightRequest="43"
+            WidthRequest="43"
+            ImageSource="fluent:save-16-regular.png"/>
+        <Entry
+            x:Name="newNote"
+            HeightRequest="36"
+            WidthRequest="137"/>
+        <Rectangle
+            x:Name="rectangle1"
+            HeightRequest="34"
+            WidthRequest="375"
+            IsVisible="false"/>
+        
+        <control:fa6-regular:trash-can fa6-regular:trash-can        />
+
+</VerticalStackLayout>
+
+
+</ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,107 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class=add notePage
+                    x:Name=add note
+>
+<ScrollView>
+
+
+<VerticalStackLayout>
+
+        <Button
+            FontSize="40"
+            Text="+"
+            TextColor="#ffffff"
+            FontAutoScalingEnabled="false"
+            Background="#191919"
+            BorderWidth="1"
+            x:Name="addNote"
+            HeightRequest="47"
+            WidthRequest="377"
+            Background="#ff191919"/>
+        <ImageButton
+            FontSize="24"
+            Text="New note"
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note6"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note 6.png"/>
+        <ImageButton
+            FontSize="24"
+            Text="Particle accelerator"
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note5"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note5.png"/>
+        <ImageButton
+            FontSize="24"
+            Text="Plans for world domination"
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note4"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note4.png"/>
+        <ImageButton
+            FontSize="24"
+            Text="Random notes"
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note3"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note3.png"/>
+        <ImageButton
+            FontSize="24"
+            Text="Gift ideas"
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note2"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note2.png"/>
+        <ImageButton
+            FontSize="24"
+            Text="Groceries "
+            TextColor="#ffffff"
+            Background="#3c3c3c"
+            BorderWidth="1"
+            x:Name="note1"
+            HeightRequest="47"
+            WidthRequest="377"
+            ImageSource="note1.png"/>
+        <FlexLayout
+            Background="#3c3c3c"
+            x:Name="banner"
+            HeightRequest="138"
+            WidthRequest="430">
+            <Image
+                Source="vector.png"
+                x:Name="vector"
+                HeightRequest="28"
+                WidthRequest="28"/>
+            <Label
+                FontSize="36"
+                Text="My Notes"
+                TextColor="#ffffff"
+                x:Name="myNotes"
+                HeightRequest="52"
+                WidthRequest="155"/>
+        </FlexLayout>
+
+</VerticalStackLayout>
+
+
+</ScrollView>
+
+
+</ContentPage>

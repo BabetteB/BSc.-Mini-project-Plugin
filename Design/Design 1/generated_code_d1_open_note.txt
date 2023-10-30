@@ -1,0 +1,66 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class=Open notePage
+                    x:Name=Open note
+>
+<ScrollView>
+
+
+<VerticalStackLayout>
+
+        <FlexLayout
+            x:Name="banner"
+            HeightRequest="177"
+            WidthRequest="430">
+            <Button
+                Background="#cccccc"
+                BorderWidth="1"
+                x:Name="vector"
+                HeightRequest="28"
+                WidthRequest="28"
+                Background="#ffcccccc"/>
+            <ImageButton
+                FontSize="16"
+                Text="Back"
+                TextColor="#ffffff"
+                FontAutoScalingEnabled="false"
+                x:Name="back"
+                HeightRequest="25"
+                WidthRequest="64"
+                ImageSource="back.png"/>
+            <Entry
+                x:Name="groceries"
+                HeightRequest="52"
+                WidthRequest="153"/>
+        </FlexLayout>
+        <Editor
+            x:Name="frame1"
+            HeightRequest="1227"
+            WidthRequest="430"
+            Placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+
+
+
+reprehenderit in voluptate velit esse
+
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+
+exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+
+
+
+reprehenderit in voluptate velit esse
+
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+
+</VerticalStackLayout>
+
+
+</ScrollView>
+
+
+</ContentPage>
