@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mini_Project_Note_App.Notepage"
+             >
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="15"
+            Background="#202020"
+        >
+            <VerticalStackLayout
+                Padding="29"
+                HeightRequest="138"
+                WidthRequest="430"
+            >
+                <HorizontalStackLayout
+                    Spacing="300"
+                    HorizontalOptions="Center"
+                >
+                    <Button
+                        Text="&lt;- Back"
+                        TextColor="#ffffff"
+                        Background="transparent"
+                        BorderWidth="0" 
+                        Padding="0" 
+                        HeightRequest="30"
+                        Clicked="GoBack"/>
+                    <Image
+                        Source="settings.png"
+                        HeightRequest="28"
+                        WidthRequest="28"/>
+                </HorizontalStackLayout>
+                <Entry
+                    FontSize="36"
+                    Text="Groceries"
+                    TextColor="#ffffff"/>
+            </VerticalStackLayout>
+            <Editor
+                Text="1. Eggs, the round ones
+                2. Milk, from cow
+                3. Sugar, sweet please
+                4. Toothpaste with cookie dough flavour
+                5. hmm what more"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

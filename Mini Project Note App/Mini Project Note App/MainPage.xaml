@@ -1,41 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Mini_Project_Note_App.MainPage">
-
+             x:Class="Mini_Project_Note_App.MainPage"
+             x:Name="this"
+             BindingContext="this"
+             >
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+                Spacing="15"
+                Background="#202020">
+            <VerticalStackLayout
+                Padding="29"
+                Background="#3c3c3c"
+                HeightRequest="138"
+                WidthRequest="430"
+            >
+                <Image
+                    HorizontalOptions="End"
+                    Source="settings.png"
+                    HeightRequest="28"
+                    WidthRequest="28"/>
+                <Label
+                    HorizontalOptions="Center"
+                    FontSize="36"
+                    Text="My Notes"
+                    TextColor="#ffffff"/>
+            </VerticalStackLayout>
+            <FlexLayout
+                JustifyContent="SpaceBetween"
+                Direction="Row"
+                HeightRequest="47"
+                WidthRequest="377" 
+            >
+                <FlexLayout.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#3c3c3c"
+                          Offset="0.75" />
+                        <GradientStop Color="#6f2a2a"
+                          Offset="0.9" />
+                    </LinearGradientBrush>
+                </FlexLayout.Background>
+                <FlexLayout.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="0,4"
+                        Radius="4"
+                        Opacity="0.25" />
+                </FlexLayout.Shadow>
+                <Button Clicked="OnCounterClicked" Padding="9"  Text="Groceries" Background="transparent" BorderWidth="0" FontSize="24" TextColor="White" />
+                <Image
+                    Margin="0,0,9,0"
+                    Source="trash.png" />
+            </FlexLayout>
+            <FlexLayout
+                JustifyContent="SpaceBetween"
+                Direction="Row"
+                HeightRequest="47"
+                WidthRequest="377"
+               >
+                <FlexLayout.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#3c3c3c"
+                          Offset="0.75" />
+                        <GradientStop Color="#6f2a2a"
+                          Offset="0.9" />
+                    </LinearGradientBrush>
+                </FlexLayout.Background>
+                <FlexLayout.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="0,4"
+                        Radius="4"
+                        Opacity="0.25" />
+                </FlexLayout.Shadow>
+                <Button Padding="9"  Text="Gift Ideas" Background="transparent" BorderWidth="0" FontSize="24" TextColor="White" />
+                <Image
+                    Margin="0,0,9,0"
+                    Source="trash.png" />
+            </FlexLayout>
+            <FlexLayout
+                JustifyContent="SpaceBetween"
+                Direction="Row"
+                HeightRequest="47"
+                WidthRequest="377">
+                <FlexLayout.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#3c3c3c"
+                          Offset="0.75" />
+                        <GradientStop Color="#6f2a2a"
+                          Offset="0.9" />
+                    </LinearGradientBrush>
+                </FlexLayout.Background>
+                <FlexLayout.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="0,4"
+                        Radius="4"
+                        Opacity="0.25" />
+                </FlexLayout.Shadow>
+                <Button Padding="9"  Text="Random Notes" Background="transparent" BorderWidth="0" FontSize="24" TextColor="White" />
+                <Image
+                    Margin="0,0,9,0"
+                    Source="trash.png" />
+            </FlexLayout>
+            <FlexLayout
+                JustifyContent="SpaceBetween"
+                Direction="Row"
+                HeightRequest="47"
+                WidthRequest="377">
+                <FlexLayout.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#3c3c3c"
+                          Offset="0.75" />
+                        <GradientStop Color="#6f2a2a"
+                          Offset="0.9" />
+                    </LinearGradientBrush>
+                </FlexLayout.Background>
+                <FlexLayout.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="0,4"
+                        Radius="4"
+                        Opacity="0.25" />
+                </FlexLayout.Shadow>
+                <Button Padding="9"  Text="Plans for world domination" Background="transparent" BorderWidth="0" FontSize="24" TextColor="White" />
+                <Image
+                    Margin="0,0,9,0"
+                    Source="trash.png" />
+            </FlexLayout>
+            <FlexLayout
+                JustifyContent="SpaceBetween"
+                Direction="Row"
+                HeightRequest="47"
+                WidthRequest="377">
+                <FlexLayout.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="#3c3c3c"
+                          Offset="0.75" />
+                        <GradientStop Color="#6f2a2a"
+                          Offset="0.9" />
+                    </LinearGradientBrush>
+                </FlexLayout.Background>
+                <FlexLayout.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="0,4"
+                        Radius="4"
+                        Opacity="0.25" />
+                </FlexLayout.Shadow>
+                <Button Padding="9"  Text="Particle accelerator" Background="transparent" BorderWidth="0" FontSize="24" TextColor="White" />
+                <Image
+                    Margin="0,0,9,0"
+                    Source="trash.png" />
+            </FlexLayout>
+                <Button
+                FontSize="40"
+                Text="+"
+                TextColor="#ffffff"
+                FontAutoScalingEnabled="false"
+                Background="#191919"
+                BorderWidth="0"
+                x:Name="addNote"
+                HeightRequest="47"
+                WidthRequest="377"/>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
-    </ScrollView>
+        </ScrollView>
 
 </ContentPage>
