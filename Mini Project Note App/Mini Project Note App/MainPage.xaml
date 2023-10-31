@@ -4,38 +4,90 @@
              x:Class="Mini_Project_Note_App.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        
+        <StackLayout Orientation="Vertical" Margin="20" Spacing="10">
+            <Grid Background="#3c3c3c"
+                  x:Name="banner"
+                  HeightRequest="138"
+                  WidthRequest="430">
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                <!-- Define the rows for the Grid -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                <!-- Define the columns for the Grid -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                <!-- Button at top right -->
+                <ImageButton Grid.Row="0" Grid.Column="2"
+                    BorderWidth="1"
+                    x:Name="vector"
+                    HeightRequest="14"
+                    WidthRequest="14"
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"
+                    Source="settings.png"/>
 
-        </VerticalStackLayout>
+                <!-- Text at bottom center -->
+                <Label Grid.Row="1" Grid.Column="1"
+                   FontSize="24"
+                   Text="My Notes"
+                   TextColor="#ffffff"
+                   x:Name="myNotes"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center" />
+                 </Grid>
+
+
+            <!--List of notes starts here -->
+        <ListView x:Name="myListView" ItemsSource="{Binding MyItems}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label 
+                                BackgroundColor="Grey"
+                                WidthRequest="300"
+                                HeightRequest="30"
+                                Text="{Binding ItemName}" VerticalOptions="Center" />
+                            <ImageButton BackgroundColor="#3c3c3c"
+                                    BorderWidth="1"
+                                    HeightRequest="30"
+                                    WidthRequest="25"
+                                    Source="trash.png"
+                                        Margin="10,0,0,0" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <!--Add new item starts here -->
+            <StackLayout>
+                <Entry 
+                    x:Name="newItemEntry" 
+                    Placeholder="New Item" 
+                    HeightRequest="47"
+                    WidthRequest="377"/>
+                <Button
+                    FontSize="40"
+                    Text="+"
+                    TextColor="#ffffff"
+                    BackgroundColor="#191919"
+                    BorderWidth="1"
+                    x:Name="addNote"
+                    HeightRequest="47"
+                    WidthRequest="377"
+                    Clicked="OnAddItemClicked"/>
+            </StackLayout>
+        </StackLayout>
+
     </ScrollView>
-
 </ContentPage>
